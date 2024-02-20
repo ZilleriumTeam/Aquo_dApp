@@ -1,7 +1,7 @@
-# 🔥 Auqo
+# 🔥 Aquo
 
 <h4 align="center">
-  <a href="https://www.aquoassets.com">Website</a>
+  <a href="https://www.aquoassets.com">Website</a> <br/>
   <a href="https://www.youtube.com/@Aquo-tt5bx">YouTube</a>
 </h4>
 
