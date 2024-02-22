@@ -53,7 +53,7 @@ const wallets = [
   walletConnectWallet(walletsOptions),
   ledgerWallet(walletsOptions),
   braveWallet(walletsOptions),
-  coinbaseWallet({ ...walletsOptions, appName: "scaffold-eth-2" }),
+  coinbaseWallet({ ...walletsOptions, appName: "Aquo_dApp" }),
   rainbowWallet(walletsOptions),
   ...(!targetNetworks.some(network => network.id !== chains.hardhat.id) || !onlyLocalBurnerWallet
     ? [

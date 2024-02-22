@@ -98,7 +98,7 @@ export const Faucet = () => {
             ✕
           </label>
           <div className="space-y-3">
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 justify-between">
               <div>
                 <span className="text-sm font-bold">From:</span>
                 <Address address={faucetAddress} />
