@@ -11,7 +11,7 @@ const Debug: NextPage = () => {
   return (
     <>
       <DebugContracts />
-      <div className="text-center mt-8 bg-primary p-10">
+      {/* <div className="text-center mt-8 bg-primary p-10">
         <h1 className="text-4xl my-0">RWA Hub</h1>
         <p className="text-neutral">
           Create Liquidity for your RWAs in an easy way.
@@ -20,7 +20,7 @@ const Debug: NextPage = () => {
             our docs
           </code>{" "}
         </p>
-      </div>
+      </div> */}
     </>
   );
 };
