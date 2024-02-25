@@ -4,10 +4,11 @@ import React, { useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BanknotesIcon, Bars3Icon, BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { BanknotesIcon, Bars3Icon, BellAlertIcon, BugAntIcon, MagnifyingGlassIcon, MusicalNoteIcon, NewspaperIcon, PaintBrushIcon, PaperAirplaneIcon, PaperClipIcon, PlayCircleIcon, PlayIcon, ShareIcon } from "@heroicons/react/24/outline";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
 import { CurrencyDollarIcon, EyeIcon } from "@heroicons/react/24/outline";
+import { PlayPauseIcon } from "@heroicons/react/24/solid";
 
 type HeaderMenuLink = {
   label: string;
@@ -23,27 +24,27 @@ export const menuLinks: HeaderMenuLink[] = [
   {
     label: "Trade",
     href: "/trade",
-    icon: <CurrencyDollarIcon className="h-4 w-4" />,
+    icon: <PlayCircleIcon className="h-6 w-6" />,
   },
+  // {
+  //   label: "DAO",
+  //   href: "/dao",
+  //   icon: <BanknotesIcon className="h-4 w-4" />,
+  // },
   {
-    label: "DAO",
-    href: "/dao",
-    icon: <BanknotesIcon className="h-4 w-4" />,
-  },
-  {
-    label: "Composition",
-    href: "/composition",
-    icon: <BanknotesIcon className="h-4 w-4" />,
+    label: "Compositions",
+    href: "/compositions",
+    icon: <ShareIcon className="h-6 w-6" />,
   },
   {
     label: "Derivatives",
     href: "/derivatives",
-    icon: <BanknotesIcon className="h-4 w-4" />,
+    icon: <PaperClipIcon className="h-6 w-6" />,
   },
   {
-    label: "Explorer",
-    href: "/blockexplorer",
-    icon: <MagnifyingGlassIcon className="h-4 w-4" />,
+    label: "Valuations",
+    href: "/valuations",
+    icon: <EyeIcon className="h-6 w-6" />,
   },
 ];
 
@@ -60,8 +61,8 @@ export const HeaderMenuLinks = () => {
               href={href}
               passHref
               className={`${
-                isActive ? "bg-secondary shadow-md" : ""
-              } hover:bg-secondary hover:shadow-md focus:!bg-secondary active:!text-neutral py-1.5 px-3 text-sm rounded-full gap-2 grid grid-flow-col`}
+                isActive ? "bg-primary shadow-md" : ""
+              } hover:bg-primary hover:shadow-md focus:!bg-primary active:!text-neutral py-1.5 px-3 text-sm rounded-full gap-2 grid grid-flow-col`}
             >
               {icon}
               <span>{label}</span>
@@ -85,12 +86,12 @@ export const Header = () => {
   );
 
   return (
-    <div className="sticky lg:static top-0 navbar bg-base-100 min-h-0 flex-shrink-0 justify-between z-20 shadow-md shadow-secondary px-0 sm:px-2">
+    <div className="sticky lg:static top-0 navbar bg-base-100 min-h-0 flex-shrink-0 justify-between z-20 shadow-md shadow-primary px-0 sm:px-2">
       <div className="w-auto lg:w-1/2 navbar-start">
         <div className="lg:hidden dropdown" ref={burgerMenuRef}>
           <label
             tabIndex={0}
-            className={`ml-1 btn btn-ghost ${isDrawerOpen ? "hover:bg-secondary" : "hover:bg-transparent"}`}
+            className={`ml-1 btn btn-ghost ${isDrawerOpen ? "hover:bg-primary" : "hover:bg-transparent"}`}
             onClick={() => {
               setIsDrawerOpen(prevIsOpenState => !prevIsOpenState);
             }}
